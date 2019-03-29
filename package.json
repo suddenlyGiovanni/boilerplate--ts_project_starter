@@ -1,6 +1,6 @@
 {
   "name": "ts-project-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.ts",
   "author": "Giovanni Ravalico <ravalico.giovanni@gmail.com>",
   "license": "MIT",

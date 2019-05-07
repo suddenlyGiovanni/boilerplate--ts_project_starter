@@ -30,5 +30,44 @@
       "language": "typescriptreact",
       "autoFix": true
     }
+  ],
+  "better-comments.tags": [
+    {
+      "tag": "🚨",
+      "color": "#FF0000",
+      "strikethrough": false
+    },
+    {
+      "tag": "✅",
+      "color": "#00FF00",
+      "strikethrough": false
+    },
+    {
+      "tag": "💡",
+      "color": "#FFFF00",
+      "strikethrough": false
+    },
+    {
+      "tag": "‣",
+      "color": "#00FFFF",
+      "backgroundColor": "#333333",
+      "strikethrough": false
+    },
+    {
+      "tag": "(",
+      "color": "#FFFF00",
+      "strikethrough": false
+    },
+    {
+      "tag": "-",
+      "color": "#FFFF00",
+      "strikethrough": false
+    },
+    {
+      "tag": "==",
+      "backgroundColor": "#FFFFFF",
+      "color": "#000000",
+      "strikethrough": false
+    }
   ]
 }

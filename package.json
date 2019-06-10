@@ -1,46 +1,62 @@
 {
   "name": "ts-project-starter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "src/index.ts",
-  "author": "Giovanni Ravalico <ravalico.giovanni@gmail.com>",
+  "author": "suddenlyGiovanni <ravalico.giovanni@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "ts-node": "^8.0.3",
-    "typescript": "^3.3.4000"
+  "description": "My highly opinionated starting point for any TypeScript project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suddenlyGiovanni/boilerplate--ts_project_starter"
   },
+  "bugs": {
+    "url": "https://github.com/suddenlyGiovanni/boilerplate--ts_project_starter/issues"
+  },
+  "homepage": "https://github.com/suddenlyGiovanni/boilerplate--ts_project_starter",
   "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "@types/jest": "^24.0.11",
-    "@typescript-eslint/eslint-plugin": "^1.5.0",
-    "@typescript-eslint/parser": "^1.5.0",
-    "babel-preset-jest": "^24.3.0",
-    "commitizen": "^3.0.7",
-    "commitlint": "^7.5.2",
+    "@babel/core": "^7.4.5",
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@types/jest": "^24.0.13",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "babel-preset-jest": "^24.6.0",
+    "commitizen": "^3.1.1",
+    "commitlint": "^8.0.0",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^5.15.3",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-jest": "^22.4.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "husky": "^1.3.1",
-    "jest": "^24.5.0",
+    "dtslint": "^0.7.9",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.4.0",
+    "jest": "^24.8.0",
     "precise-commits": "^1.0.2",
-    "prettier": "^1.16.4",
-    "ts-jest": "^24.0.0"
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
   },
   "scripts": {
-    "commit": "git-cz",
-    "test": "jest"
+    "cz": "git-cz",
+    "test": "jest",
+    "test-types": "dtslint types",
+    "clean": "rm -rf lib",
+    "purge-node_modules": "rm -rf node_modules"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "commit-msg": "./node_modules/.bin/commitlint -e $HUSKY_GIT_PARAMS",
       "pre-commit": "precise-commits"
     }
   }

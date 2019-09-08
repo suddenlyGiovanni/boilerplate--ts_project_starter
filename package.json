@@ -22,7 +22,7 @@
     "@typescript-eslint/parser": "^1.10.2",
     "babel-preset-jest": "^24.6.0",
     "commitizen": "^3.1.1",
-    "commitlint": "^8.0.0",
+    "commitlint": "^8.1.0",
     "cz-conventional-changelog": "^2.1.0",
     "dtslint": "^0.7.9",
     "eslint": "^5.16.0",

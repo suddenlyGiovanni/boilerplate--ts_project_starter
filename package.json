@@ -24,7 +24,7 @@
     "commitizen": "^4.0.3",
     "commitlint": "^8.2.0",
     "cz-conventional-changelog": "^3.0.2",
-    "dtslint": "^0.9.8",
+    "dtslint": "^2.0.2",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-jest": "^22.19.0",

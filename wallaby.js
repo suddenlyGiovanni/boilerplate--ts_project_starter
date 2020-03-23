@@ -1,18 +1,38 @@
-module.exports = function(wallaby) {
+module.exports = function (wallaby) {
   return {
     files: [
-      'tsconfig.json',
-      'jest.config.js',
-      'src/**/*.ts?(x)',
-      '!src/**/*.test.ts?(x)',
-      '!src/**/*.spec.ts?(x)',
+      {
+        pattern: 'tsconfig.json',
+        ignore: false,
+        instrument: false,
+        load: false,
+      },
+      {
+        pattern: 'jest.config.js',
+        ignore: false,
+        instrument: false,
+        load: false,
+      },
+      { pattern: 'src/**/*.ts', instrument: true, load: true, ignore: false },
+      { pattern: 'lib/**/*.js', ignore: true, instrument: false, load: false },
+      {
+        pattern: 'src/**/*.spec.ts',
+        ignore: true,
+        instrument: false,
+        load: false,
+      },
+      {
+        pattern: 'src/**/*.test.ts',
+        ignore: true,
+        instrument: false,
+        load: false,
+      },
     ],
 
-    tests: ['src/**/*.spec.ts?(x)', 'src/**/*.test.ts?(x)'],
+    tests: ['src/**/*.spec.ts', 'src/**/*.test.ts'],
 
     env: {
       type: 'node',
-      runner: 'node',
     },
 
     testFramework: 'jest',
@@ -21,16 +41,12 @@ module.exports = function(wallaby) {
     lowCoverageThreshold: 80,
 
     compilers: {
-      '**/*.ts?(x)': wallaby.compilers.typeScript({ module: 'commonjs' }),
-    },
-
-    preprocessors: {
-      '**/*.js?(x)': file =>
-        require('@babel/core').transform(file.content, {
-          sourceMap: true,
-          filename: file.path,
-          presets: [require('babel-preset-jest')],
-        }),
+      '**/*.ts': wallaby.compilers.typeScript({
+        /* TypeScript compiler specific options
+         * https://github.com/Microsoft/TypeScript/wiki/Compiler-Options
+         * (no need to duplicate tsconfig.json, if you have it, it will be automatically used) */
+        useStandardDefaults: true,
+      }),
     },
   }
 }

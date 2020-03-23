@@ -54,8 +54,8 @@
     "plugin:unicorn/recommended",
     "plugin:sonarjs/recommended",
 
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
     "prettier"
   ],
 

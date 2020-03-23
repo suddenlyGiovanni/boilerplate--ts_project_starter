@@ -69,5 +69,6 @@
     "resolveJsonModule": true
   },
   "include": ["src"],
+  "exclude": ["./jest.config.js", "./wallaby.js"],
   "typeAcquisition": { "enable": true }
 }

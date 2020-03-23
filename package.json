@@ -42,7 +42,7 @@
     "typescript": "3.8.3"
   },
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpileOnly src/index.ts",
+    "dev": "ts-node-dev --respawn --transpileOnly  --inspect -- src/index.ts",
     "prod": "npm run build && node .src/lib/index.js",
     "build": "tsc -p .",
     "build:watch": "npm run build -- -w",

@@ -1,10 +1,7 @@
-// import { f } from 'my-lib' // f is(n: number) => void
+import { add } from '../src/index' // f is(n: number) => void
 
-// $ExpectType void
-// f(1)
+// $ExpectType (b: number) => number
+add(1)
 
-// Can also write the assertion on the same line.
-// f(2) // $ExpectType void
-
-// $ExpectError
-// f('one')
+// $ExpectType n umber
+add(1)(2)

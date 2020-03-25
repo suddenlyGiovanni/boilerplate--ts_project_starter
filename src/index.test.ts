@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { AssertEqual } from '../types'
+
 import { add } from '.'
 
 describe('add', () => {
@@ -9,3 +12,10 @@ describe('add', () => {
     expect(add(a)(b)).toBe(a + b)
   })
 })
+
+const condFirstArgument: AssertEqual<typeof add, (x: number) => any> = true
+const condRetunrCurry: AssertEqual<
+  ReturnType<typeof add>,
+  (y: number) => any
+> = true
+const condReturn: AssertEqual<ReturnType<ReturnType<typeof add>>, number> = true

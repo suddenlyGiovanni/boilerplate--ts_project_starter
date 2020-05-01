@@ -19,7 +19,7 @@
     "@types/jest": "25.1.4",
     "@typescript-eslint/eslint-plugin": "2.25.0",
     "@typescript-eslint/parser": "2.25.0",
-    "commitizen": "4.0.3",
+    "commitizen": "4.0.5",
     "commitlint": "8.3.5",
     "cz-conventional-changelog": "3.1.0",
     "dtslint": "3.4.0",

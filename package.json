@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/suddenlyGiovanni/boilerplate--ts_project_starter",
   "devDependencies": {
-    "@commitlint/cli": "9.1.2",
+    "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "9.1.2",
     "@types/jest": "26.0.12",
     "@typescript-eslint/eslint-plugin": "4.0.1",
